@@ -1,0 +1,40 @@
+<div>
+    <nav class="navbar navbar-fixed-top main-nav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">{{title}}</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="row spacer">
+        <div class="col-md-12">
+            <!-- directive for showing map and atms -->
+            <atms-nearby-directive ng-model="atmList"></atms-nearby-directive>
+            <!-- end directive for showing map and atms -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="list-unstyled week-data-list">
+                <li ng-repeat="atm in atmList | orderBy:'distance'  track by $index" class="bank-list" class="atm">
+                    <div class="row">
+                        <div class="col-md-7">
+                            {{::atm.name}} ({{atm.address}})
+                        </div>
+                        <div class="col-md-5">
+                            <b>{{::atm.distance }}m</b> distance
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>

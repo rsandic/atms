@@ -1,0 +1,29 @@
+{
+  "name": "atms",
+  "description": "dependeci_list_of_bower_components",
+  "main": "bower.js",
+  "authors": [
+    "Radovan Sandic"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bower",
+    "instal",
+    "directory"
+  ],
+  "homepage": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-local-storage": "^0.5.2",
+    "bootstrap": "^3.3.7",
+    "angular-route": "1.5.8",
+    "angular-ui-router": "~0.3.1"
+  }
+}
